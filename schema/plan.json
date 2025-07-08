@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Workout Plan",
+    "description": "A schema for a workout plan.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The name of the workout plan.",
+            "type": "string"
+        },
+        "exercises": {
+            "description": "A list of exercises in the workout plan.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "exercise": {
+                        "description": "The name of the exercise.",
+                        "type": "string"
+                    },
+                    "sets": {
+                        "description": "The number of sets for the exercise.",
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "reps": {
+                        "description": "The number of repetitions for the exercise.",
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "weight": {
+                        "description": "The weight to be used for the exercise.",
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "exercise",
+                    "sets",
+                    "reps",
+                    "weight"
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "exercises"
+    ]
+}
