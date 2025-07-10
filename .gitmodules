@@ -1,3 +1,0 @@
-[submodule "key_value_db"]
-	path = extern/key_value_db
-	url = https://github.com/Jacob-C-Smith/key_value_db

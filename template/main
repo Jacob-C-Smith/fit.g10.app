@@ -15,16 +15,10 @@
 
     <body>
         <main class="catalog">
-            <h1>{{ .User.Username }}</h1>
-            <h2><a href="/history">history</a></h2>
-
-            {{ range .Catalog }}
-                <a href="/card?start={{ .Name }}">
-                    <section class="plan" id="{{ .Name }}" hx-trigger="clicked" hx-post="/card">
-                        <h1>{{ .Name }} <hr> {{ len .Exercises }}&nbsp;Exercises</h1>
-                    </section>
-                </a>
-            {{ end }}
+            <h1>{{ .User }}</h1>
+            <h2>
+                <a href="/history">history</a>
+            </h2>
         </main>
     </body>
 </html>

@@ -4,6 +4,7 @@ package infrastructure
 // imports
 import (
 	"encoding/json"
+	"fmt"
 
 	"fit/model"
 )
@@ -28,6 +29,8 @@ func LoadUserRecords() (err error) {
 		// add the user to the list of users
 		model.UserRecords = append(model.UserRecords, item)
 	}
+
+	fmt.Printf("Loaded %d user records\n", len(model.UserRecords))
 
 	// done
 	return

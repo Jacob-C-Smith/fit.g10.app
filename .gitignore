@@ -105,3 +105,9 @@ dist
 
 # MacOS stupid stuff
 .DS_Store
+
+# Redis
+*.rdb
+
+# Logs
+log/

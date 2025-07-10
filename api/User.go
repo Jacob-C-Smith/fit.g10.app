@@ -16,7 +16,7 @@ var (
 func init() {
 
 	// load the template from the file system
-	user_template, _ = template.ParseFiles("template/main.tmpl")
+	user_template, _ = template.ParseFiles("template/main")
 }
 
 func GetUser(w http.ResponseWriter, r *http.Request) {
